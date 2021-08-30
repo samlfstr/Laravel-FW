@@ -4,22 +4,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Laravel</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
 
-
+<link rel="stylesheet" href="{{ URL::asset('css/bg_color.css') }}">
   </head>
 
   <body>
 
-    <p id="message">Change the background color of the page</p>
+    <div class="container">
+      <div>
+        <p id="message">Change the background color of the page</p>
+        <button class="btn btn-dark" type="button" id="bg-color"> Change the BG color!</button>
+      </div>
+    </div>
 
-    <button type="button" id="bg-color"> Change the BG color!</button>
+
 
     <script src="{{ URL::asset('js/bg_color.js') }}"></script>
-
   </body>
+
 </html>

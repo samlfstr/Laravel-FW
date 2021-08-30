@@ -1,4 +1,5 @@
-let background = document.documentElement;
+// let background = document.documentElement;
+let background = document.getElementsByTagName("body")[0];
 let bg_color = document.getElementById("bg-color");
 let previous = 0;
 
@@ -11,9 +12,7 @@ let colors = [
   "purple",
   "orange",
   "black",
-  "pink",
-
-
+  "pink"
 ];
 
 bg_color.addEventListener(
