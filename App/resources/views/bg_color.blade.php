@@ -17,14 +17,15 @@
 
     <div class="container">
       <div>
-        <p id="message">Change the background color of the page</p>
+        <p>Background color of the page : <strong id="color">  </strong> </p>        
         <button class="btn btn-dark" type="button" id="bg-color"> Change the BG color!</button>
+  
       </div>
     </div>
 
 
 
-    <script src="{{ URL::asset('js/bg_color.js') }}"></script>
+    <script src="{{ URL::asset('js/bg_color2.js') }}"></script>
   </body>
 
 </html>

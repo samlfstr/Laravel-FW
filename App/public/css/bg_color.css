@@ -9,3 +9,7 @@
 }
 
 *{ font-family: Oxygen, Arial, sans-serif; }
+
+#counter{
+  text-align:center;
+}

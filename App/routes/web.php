@@ -30,3 +30,7 @@ Route::get('/exc', function () {
 Route::get('/bg', function () {
     return view('bg_color');
 });
+
+Route::get('/counter', function () {
+    return view('counter');
+});
