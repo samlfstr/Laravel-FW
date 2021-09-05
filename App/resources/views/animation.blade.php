@@ -10,18 +10,22 @@
 
 <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="{{ URL::asset('css/bg_color.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/animation.css') }}">
   </head>
 
   <body>
 
     <div class="container">
-      
+      <div>
+        <p>Background color of the page : <strong id="color">  </strong> </p>        
+        <button class="btn btn-dark" type="button" id="bg-color"> Change the BG color!</button>
+  
+      </div>
     </div>
 
 
 
-    <script src="{{ URL::asset('js/bg_color2.js') }}"></script>
+    <script src="{{ URL::asset('js/animation.js') }}"></script>
   </body>
 
 </html>
