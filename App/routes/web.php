@@ -34,3 +34,7 @@ Route::get('/bg', function () {
 Route::get('/counter', function () {
     return view('counter');
 });
+
+ Route::get('/reviews', function () {
+     return view('reviews');
+ });

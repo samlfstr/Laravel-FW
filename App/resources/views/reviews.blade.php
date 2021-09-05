@@ -17,18 +17,22 @@
   <body>
 
     <div class="container">
-      <div id="counter">
-        <h1>Counter</h1>
-        <h1 id="number"> 0 </h1>
-        <button id="decrease" class="btn btn-danger"> Decrease </button>
-        <button id="reset" class="btn btn-dark"> Reset </button>
-        <button id="increase" class="btn btn-success"> Increase </button>
+
+    <img id="P1" class="image rounded-circle" src="{{ URL::asset('images/P1.png') }}" alt="">
+
+    <img id="P2" class="image rounded-circle" src="{{ URL::asset('images/P2.png') }}" alt="">
+    
+    <img id="P3" class="image rounded-circle" src="{{ URL::asset('images/P3.png') }}" alt="">
+
+      <div class="reviews">
+        <button id="btn-right" class="btn button-17" role="button"> &#x21e8; </button>
+        <button id="btn-left" class="btn button-17" role="button"> &#x21e6; </button>        
       </div>
     </div>
 
 
 
-    <script src="{{ URL::asset('js/counter2.js') }}"></script>
+    <script src="{{ URL::asset('js/reviews.js') }}"></script>
   </body>
 
 </html>
