@@ -14,7 +14,7 @@
   text-align:center;
 }
 
-.container > .reviews{
+.container > .buttons{
   position: relative;
   width: 500px;
   height: 350px;
@@ -56,12 +56,12 @@
   will-change: transform,opacity;
   z-index: 0;
   position: absolute;
-  bottom: 25px;
+  bottom: 13px;
   right: 35%;
 }
 .button-17:nth-of-type(2) {
   position: absolute;
-  bottom: 25px;
+  bottom: 13px;
   right: 52%;
 }
 }
@@ -98,7 +98,23 @@
 }
 
 .image{
+  position: absolute;
+  left: 39%;
   height: 5em;
-  position : absolute;
-  top : 3.5em;
+  top: 1em;
+
+}
+
+.review{
+  position: absolute;
+  top: 121px;
+  font-size: 13px;
+  text-align: center;
+  padding: 10px;
+}
+
+p#info{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  width: 37em;
 }

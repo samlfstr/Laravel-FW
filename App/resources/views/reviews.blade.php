@@ -17,22 +17,25 @@
   <body>
 
     <div class="container">
+      <div class="buttons">
+      <img class="image rounded-circle" src="images/P3.png" alt="">
+        <article class="review">
+          <h4 id="author"> Samuel Foster</h4>
+          <p id="job"> Ux Designer</p>
+          <p id="info"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quod, exercitationem aut culpa
+            laboriosam quia aperiam ullam atque sed ipsam unde similique pariatur, quasi modi sapiente. Hic cupiditate
+            reprehenderit provident.</p>
+        </article>
 
-    <img id="P1" class="image rounded-circle" src="{{ URL::asset('images/P1.png') }}" alt="">
 
-    <img id="P2" class="image rounded-circle" src="{{ URL::asset('images/P2.png') }}" alt="">
-    
-    <img id="P3" class="image rounded-circle" src="{{ URL::asset('images/P3.png') }}" alt="">
-
-      <div class="reviews">
         <button id="btn-right" class="btn button-17" role="button"> &#x21e8; </button>
-        <button id="btn-left" class="btn button-17" role="button"> &#x21e6; </button>        
+        <button id="btn-left" class="btn button-17" role="button"> &#x21e6; </button>
       </div>
     </div>
 
 
 
-    <script src="{{ URL::asset('js/reviews.js') }}"></script>
+    <script src="{{ URL::asset('js/reviews2.js') }}"></script>
   </body>
 
 </html>
