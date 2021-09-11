@@ -38,3 +38,7 @@ Route::get('/counter', function () {
  Route::get('/reviews', function () {
      return view('reviews');
  });
+
+ Route::get('/animate1', function () {
+    return view('animate1');
+ });

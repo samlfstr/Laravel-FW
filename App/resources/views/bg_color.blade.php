@@ -16,7 +16,10 @@
   <body>
 
     <div class="container">
-      
+      <div>
+        <p>Background color of the page : <strong id="color">  </strong> </p>        
+        <button class="btn btn-dark" type="button" id="bg-color"> Change the BG color!</button>
+      </div>
     </div>
 
 
