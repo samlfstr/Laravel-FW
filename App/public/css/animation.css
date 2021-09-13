@@ -16,3 +16,30 @@
   position: absolute;
   left: 10px;
 }
+
+
+.btn-group{
+  position: relative;
+}
+
+.btn{
+  position: absolute;
+}
+
+.left-btn{
+  left: 3em;
+}
+
+.right-btn{
+  left: 5em;
+}
+
+.up-btn{
+  bottom: 2.5em;
+  left: 0.4em;
+}
+
+.down-btn{
+  left: -1.8em;
+  top: 2.5em;
+}
