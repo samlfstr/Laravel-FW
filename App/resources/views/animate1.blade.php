@@ -31,7 +31,8 @@
 
 
 
-    <script src="{{ URL::asset('js/animation.js') }}"></script>
+    <!-- <script src="{{ URL::asset('js/animation.js') }}"></script> -->
+    <script src="{{ URL::asset('js/anim_request.js') }}"></script>
   </body>
 
 </html>

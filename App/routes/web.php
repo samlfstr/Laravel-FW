@@ -42,3 +42,7 @@ Route::get('/counter', function () {
  Route::get('/animate1', function () {
     return view('animate1');
  });
+
+ Route::get('/modal', function () {
+     return view('modal');
+ });
