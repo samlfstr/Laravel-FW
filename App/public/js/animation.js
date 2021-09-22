@@ -1,12 +1,7 @@
 let btns = document.querySelectorAll('.btn');
 
-btns.forEach((btn) =>{
-console.log(btn);
-});
-
 let orginal_loc = 0;
 // call the function move to right every ten sec.
-
 
 // increase the location var by 1 assign it to the style parameter
 function moveToRight(){
@@ -51,6 +46,6 @@ function checkKey(e) {
       clearInterval(interval);
     }
     else if (e.keyCode == '39') {
-      let interval = setInterval(moveToRight, 1); 
+      let interval = setInterval(moveToRight, 1);
     }
 } */

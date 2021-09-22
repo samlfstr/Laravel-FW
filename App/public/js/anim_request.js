@@ -1,14 +1,13 @@
-let circle = document.getElementById("circle");
-let initial_pos = 0;
+let orginal_loc = 0;
+let interval = setInterval(moveToRight, 10);
 
-circle.addEventListener(
-  'click',
-  () =>{
-    let interval = setInterval(moveToRight(), 10);
-  }
-);
 
-function moveToRight() {
-  initial_pos++;
-  circle.style.left = initial_pos + 'px';
+function moveToRight(){
+  orginal_loc++;
+  document.getElementById("circle").style.left = orginal_loc + "px";
 }
+
+
+setTimeout(function(){
+  clearInterval(interval);
+},5000);
