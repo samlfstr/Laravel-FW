@@ -17,6 +17,9 @@ btn.forEach((item)=>{
         else if(item.innerHTML == 'ANIMATION') {
             location.href = '/animate1';
         }
+        else if(item.innerHTML == 'QUESTIONS') {
+            location.href = '/questions';
+        }
     });
 });
 

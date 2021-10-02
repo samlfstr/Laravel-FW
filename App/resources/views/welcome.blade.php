@@ -26,7 +26,8 @@
       <div class="card cards" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Counter</h5>
-          <p class="card-text">Increase the number on the counter, if it is greater then 0 it's color is green, if it is less than 0 it's color is red and if it's zero it's color is black</p>
+          <p class="card-text">Increase the number on the counter, if it is greater then 0 it's color is green, if it is
+            less than 0 it's color is red and if it's zero it's color is black</p>
         </div>
         <button class="btn btn-dark" type="button">COUNTER</button>
       </div>
@@ -34,33 +35,35 @@
       <div class="card cards" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Carousel</h5>
-          <p class="card-text">Reviews are shown in a carousel. There is right and left buttons that allows user to navigate.</p>
+          <p class="card-text">Reviews are shown in a carousel. There is right and left buttons that allows user to
+            navigate.</p>
         </div>
         <button class="btn btn-dark" type="button">CAROUSEL</button>
       </div>
-       <!-- Card 4 -->
-       <div class="card cards" style="width: 18rem;">
+      <!-- Card 4 -->
+      <div class="card cards" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Modal</h5>
-          <p class="card-text">Using HTML CSS and JS I created a modal. It's very simple to use and easy to understand.</p>
+          <p class="card-text">Using HTML CSS and JS I created a modal. It's very simple to use and easy to understand.
+          </p>
         </div>
         <button class="btn btn-dark" type="button">MODAL</button>
       </div>
-       <!-- Card 5 -->
-       <div class="card cards" style="width: 18rem;">
+      <!-- Card 5 -->
+      <div class="card cards" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Animation</h5>
           <p class="card-text">Create animations using setInterval function. Manipulate easily HTML elements.</p>
         </div>
         <button class="btn btn-dark" type="button">ANIMATION</button>
       </div>
-        <!-- Card 6 -->
-        <div class="card cards" style="width: 18rem;">
+      <!-- Card 7 -->
+      <div class="card cards" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title"> ? </h5>
-          <p class="card-text"> ? </p>
+          <h5 class="card-title"> Questions </h5>
+          <p class="card-text"> You can create quesitons and hide the answers. Using only js, html & css </p>
         </div>
-        <button class="btn btn-dark" type="button"> ? </button>
+        <button class="btn btn-dark" type="button">QUESTIONS</button>
       </div>
 
     </div>
