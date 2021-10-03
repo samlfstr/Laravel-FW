@@ -247,3 +247,20 @@ Questions
 .show-text .plus-icon {
   display: none;
 }
+
+
+
+/* Update */
+input {
+    border-top: none;
+    border-left: none;
+    border-right : none;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, black 0%, white 100%);
+    border-image-slice: 1;
+    width: 70%;
+  }
+  label{
+      margin-bottom: 25px;
+  }
+

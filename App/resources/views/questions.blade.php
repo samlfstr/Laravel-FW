@@ -20,11 +20,31 @@
     <section class="questions">
       <!-- Title -->
       <div class="title">
-        <h2>General Questions</h2>
+        <h2>Questions</h2>
       </div>
       <!-- Questions -->
       <div class="section-center">
-        <!-- Single Questions -->
+        <!-- Single Question -->
+        <article class="question">
+          <!-- Question Title -->
+          <div class="question-title">
+            <form action="questions.blade.php">
+              <label for="question">
+                <input type="text" id="question" placeholder="Question" value="">
+              </label>
+              <br>
+              <label for="answer">
+                <input type="text" id="answer" placeholder="Answer" value="">
+              </label>
+            </form>
+            <button type="button" class="btn btn-dark add"> Add </button>
+          </div>
+        </article>
+
+      <!-- End of Single Question -->
+      <!-- Questions -->
+
+        <!-- Single Question -->
         <article class="question">
           <!-- Question Title -->
           <div class="question-title">
@@ -42,8 +62,48 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium necessitatibus distinctio magni
               quisquam quibusdam odit pariatur eos eius, repellendus ducimus.</p>
           </div>
-
         </article>
+        <!-- End of Single Question -->
+        <!-- Single Question -->
+        <article class="question">
+          <!-- Question Title -->
+          <div class="question-title">
+            <p>What is A.I ?</p>
+            <button type="button" class="question-btn">
+              <span class="plus-icon">
+                <i class="far fa-plus-square"></i>
+              </span>
+              <span class="minus-icon">
+                <i class="far fa-minus-square"></i>
+              </span>
+            </button>
+          </div>
+          <div class="question-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium necessitatibus distinctio magni
+              quisquam quibusdam odit pariatur eos eius, repellendus ducimus.</p>
+          </div>
+        </article>
+        <!-- End of Single Question -->
+        <!-- Single Question -->
+        <article class="question">
+          <!-- Question Title -->
+          <div class="question-title">
+            <p>What is A.I ?</p>
+            <button type="button" class="question-btn">
+              <span class="plus-icon">
+                <i class="far fa-plus-square"></i>
+              </span>
+              <span class="minus-icon">
+                <i class="far fa-minus-square"></i>
+              </span>
+            </button>
+          </div>
+          <div class="question-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium necessitatibus distinctio magni
+              quisquam quibusdam odit pariatur eos eius, repellendus ducimus.</p>
+          </div>
+        </article>
+        <!-- End of Single Question -->
       </div>
     </section>
 
