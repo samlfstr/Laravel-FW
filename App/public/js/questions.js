@@ -64,7 +64,5 @@ add_btn.addEventListener(
         }else{
             alert('Please make sure that the length is diffrent then zero');
         }
-
-
     }
 )
