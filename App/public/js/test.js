@@ -4,4 +4,3 @@ fetch("https://openlibrary.org/works/OL45883W.json")
 .catch(err => {
 	console.error(err);
 });
-
