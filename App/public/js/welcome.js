@@ -20,6 +20,9 @@ btn.forEach((item)=>{
         else if(item.innerHTML == 'QUESTIONS') {
             location.href = '/questions';
         }
+        else if(item.innerHTML == 'TODOLIST') {
+            location.href = '/todo';
+        }
     });
 });
 

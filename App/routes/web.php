@@ -50,3 +50,7 @@ Route::get('/modal', function () {
 Route::get('/questions', function () {
     return view('questions');
 });
+
+Route::get('/todo', function () {
+    return view('todo');
+});
