@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,4 +54,8 @@ Route::get('/questions', function () {
 
 Route::get('/todo', function () {
     return view('todo');
+});
+
+Route::get('/test', function () {
+    return view('test');
 });
