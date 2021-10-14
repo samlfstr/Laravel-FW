@@ -34,20 +34,11 @@
       <!-- list -->
       <div class="grocery-container">
         <div class="grocery-list">
-            <article class="grocery-item">
-                <p class="title">item</p>
-            </article>
-            <div class="btn-container">
-                <button type="button" class="edit-btn">
-                    <i class="fas fa-edit"></i>
-                </button>
-                <button type="button" class="delete-btn">
-                    <i class="fas fa-trash"></i>
-                </button>
-            </div>
+
         </div>
+
         <button type="button" class="clear-btn">
-            clear items
+          clear items
         </button>
       </div>
     </section>

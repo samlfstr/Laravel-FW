@@ -5,8 +5,9 @@ let alert = document.querySelector('.alert');
 let submitBtn = document.querySelector('.submit-btn');
 let editBtn = document.querySelector('.edit-btn');
 let deleteBtn = document.querySelector('.delete-btn');
-let clearBtn = document.querySelector('.clear-btn');555
+let clearBtn = document.querySelector('.clear-btn');
 let grecery = document.querySelector('#grocery');
+let list = document.querySelector('.grocery-list');
 
 /* Edit Option */
 let editElement;
@@ -24,18 +25,52 @@ function addItem(e) {
     // generate a unique id
     const id = new Date().getTime().toString();
     if (value && !editFlag) {
-        console.log('Add item to the list');
+        // create element
+        const element = document.createElement('article');
+        // add class
+        element.classList.add('grocery-item');
+        // add attribute
+        const attr = document.createAttribute('data-id');
+        attr.value = id;
+        // add the attr attribute to <article>
+        element.setAttributeNode(attr);
+        element.innerHTML = `
+        <p class="title">item</p>
+        <div class="btn-container">
+            <button type="button" class="edit-btn">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button type="button" class="delete-btn">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        `;
+        // append child
+        list.appendChild(element);
+
+        // display  altert
+        displayAlert('');
+
+        // display the element
+        element.classList.add('show-container');
+
     }
     // edit flag is only true when edit button is clicked
     else if (value && editFlag) {
-        console.log('Add item to the list');
+        console.log('Editing');
     }
     else {
-        alert.textContent = 'Empity Value';
-        alert.classList.add('alert-danger');
+        displayAlert('Please Enter A Value','danger');
     }
+}
+function displayAlert(text, action){
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
 
-
+    setTimeout(function(){
+        alert.textContent ="";
+        alert.classList.remove(`alert-${action}`);
+    }, 3000);
 }
 
 /* Setup Items */
