@@ -33,9 +33,9 @@ function addItem(e) {
         const attr = document.createAttribute('data-id');
         attr.value = id;
         // add the attr attribute to <article>
-        element.setAttributeNode(attr);
+        element.setAttricabuteNode(attr);
         element.innerHTML = `
-        <p class="title">item</p>
+        <p class="title">${value}</p>
         <div class="btn-container">
             <button type="button" class="edit-btn">
             <i class="fas fa-edit"></i>
@@ -48,8 +48,8 @@ function addItem(e) {
         // append child
         list.appendChild(element);
 
-        // display  altert
-        displayAlert('');
+        // display  alert
+        displayAlert('The element is successfully added', 'success');
 
         // display the element
         element.classList.add('show-container');
