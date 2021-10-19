@@ -33,7 +33,7 @@ function addItem(e) {
         const attr = document.createAttribute('data-id');
         attr.value = id;
         // add the attr attribute to <article>
-        element.setAttricabuteNode(attr);
+        element.setAttributeNode(attr);
         element.innerHTML = `
         <p class="title">${value}</p>
         <div class="btn-container">
