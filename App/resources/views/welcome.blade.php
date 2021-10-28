@@ -1,83 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ URL::asset('css/welcome.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href=" {{ mix ('css/app.css') }}">
-    <title>Welcome</title>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
-    <div class="card-container">
-      <!-- Card 1 -->
-      <div class="card cards" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Background Color</h5>
-          <p class="card-text">Change the background color of the page randomly</p>
-        </div>
-        <button class="btn btn-dark" type="button">BG COLOR</button>
-      </div>
-      <!-- Card 2 -->
-      <div class="card cards" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Counter</h5>
-          <p class="card-text">Increase the number on the counter, if it is greater then 0 it's color is green, if it is
-            less than 0 it's color is red and if it's zero it's color is black</p>
-        </div>
-        <button class="btn btn-dark" type="button">COUNTER</button>
-      </div>
-      <!-- Card 3 -->
-      <div class="card cards" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Carousel</h5>
-          <p class="card-text">Reviews are shown in a carousel. There is right and left buttons that allows user to
-            navigate.</p>
-        </div>
-        <button class="btn btn-dark" type="button">CAROUSEL</button>
-      </div>
-      <!-- Card 4 -->
-      <div class="card cards" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Modal</h5>
-          <p class="card-text">Using HTML CSS and JS I created a modal. It's very simple to use and easy to understand.
-          </p>
-        </div>
-        <button class="btn btn-dark" type="button">MODAL</button>
-      </div>
-      <!-- Card 5 -->
-      <div class="card cards" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Animation</h5>
-          <p class="card-text">Create animations using setInterval function. Manipulate easily HTML elements.</p>
-        </div>
-        <button class="btn btn-dark" type="button">ANIMATION</button>
-      </div>
-      <!-- Card 7 -->
-      <div class="card cards" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"> Questions </h5>
-          <p class="card-text"> You can create quesitons and hide the answers. Using only js, html & css </p>
-        </div>
-        <button class="btn btn-dark" type="button">QUESTIONS</button>
-      </div>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-      <!-- Card 8 -->
-      <div class="card cards" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"> TodoList </h5>
-          <p class="card-text"> It's uses local storage so the changes you make will be saved.</p>
-        </div>
-        <button class="btn btn-dark" type="button">TODOLIST</button>
-      </div>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Styles -->
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+<div class="flex flex-col">
+    @if(Route::has('login'))
+        <div class="absolute top-0 right-0 mt-4 mr-4 space-x-4 sm:mt-6 sm:mr-6 sm:space-x-6">
+            @auth
+                <a href="{{ url('/home') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Home') }}</a>
+            @else
+                <a href="{{ route('login') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Login') }}</a>
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Register') }}</a>
+                @endif
+            @endauth
+        </div>
+    @endif
+
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="flex flex-col justify-around h-full">
+            <div>
+                <h1 class="mb-6 text-gray-600 text-center font-light tracking-wider text-4xl sm:mb-8 sm:text-6xl">
+                    {{ config('app.name', 'Laravel') }}
+                </h1>
+                <ul class="flex flex-col space-y-2 sm:flex-row sm:flex-wrap sm:space-x-8 sm:space-y-0">
+                    <li>
+                        <a href="https://laravel.com/docs" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Documentation">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="https://laracasts.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Laracasts">Laracasts</a>
+                    </li>
+                    <li>
+                        <a href="https://laravel-news.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="News">News</a>
+                    </li>
+                    <li>
+                        <a href="https://nova.laravel.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Nova">Nova</a>
+                    </li>
+                    <li>
+                        <a href="https://forge.laravel.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Forge">Forge</a>
+                    </li>
+                    <li>
+                        <a href="https://vapor.laravel.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Vapor">Vapor</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/laravel/laravel" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="GitHub">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://tailwindcss.com" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Tailwind Css">Tailwind CSS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <script src="{{ URL::asset('js/welcome.js') }}"></script>
-  </body>
-
+</div>
+</body>
 </html>
