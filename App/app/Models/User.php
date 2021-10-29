@@ -10,6 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+    /*That way I can select the table that is going to be used*/
     protected $table= "users";
 
     use HasApiTokens, HasFactory, Notifiable;
@@ -44,6 +45,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // Mind using eager load when you deal with related tables
     static function getUserById($key){
         $users = User::all();
        return $users->find($key);
