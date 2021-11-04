@@ -11,7 +11,8 @@
 <body>
 
 
-<script src="{{ URL::asset('js/dataStructures.js') }}"></script>
+<script src="{{ URL::asset('js/Data Structures/dataStructures.js') }}"></script>
+<script src="{{ URL::asset('js/Data Structures/forLoopComplexity.js') }}"></script>
 </body>
 
 </html>
