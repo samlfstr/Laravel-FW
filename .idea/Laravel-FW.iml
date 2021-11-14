@@ -115,6 +115,8 @@
       <excludeFolder url="file://$MODULE_DIR$/App/vendor/phpdocumentor/type-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/App/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/App/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/App/vendor/laravel-frontend-presets/tailwindcss" />
+      <excludeFolder url="file://$MODULE_DIR$/App/vendor/laravel/ui" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
