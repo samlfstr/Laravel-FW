@@ -13,7 +13,7 @@
 </head>
 <body>
   <div>
-    <h3>Whats his name ?</h3>
+    <h3>What's his name ?</h3>
     <p>His name is <strong> {{ $name }} </strong></p>
   </div>
 </body>

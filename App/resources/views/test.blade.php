@@ -11,8 +11,10 @@
 
         <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
     </head>
-
     <body>
+        <!-- Start Body -->
+        <p> First Name : {{ $name }}</p>
+        <!-- End Body-->
         <script src="{{ URL::asset('js/test.js') }}"></script>
     </body>
 

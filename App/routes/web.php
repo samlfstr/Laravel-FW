@@ -25,7 +25,8 @@ Route::get('/bg', function () {
 });
 
 Route::get('/exc', function () {
-    return view("routing")->with(["name" => "Taylor"]);
+    return view("routing")
+        ->with(["name" => "Taylor"]);
 });
 
 Route::get('/bg', function () {
@@ -57,7 +58,8 @@ Route::get('/todo', function () {
 });
 
 Route::get('/test', function () {
-    return view('test');
+    return view('test')
+        ->with(['name' => 'Samuel']);
 });
 
 Route::get('/main ', function () {
@@ -70,6 +72,10 @@ Route::get('/greeting', function () {
 
 Route::get('/data', function () {
     return view('dataStructures');
+});
+
+Route::get('/posts',function(){
+    return view('posts');
 });
 
 Route::permanentRedirect('/here', '/to_there');
