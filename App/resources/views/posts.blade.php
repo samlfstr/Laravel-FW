@@ -12,12 +12,49 @@
 
 <body>
 
-
   <div class="post_container">
-    <article class="post">
-      <h1 class="title">Post</h1>
-      <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam corrupti. Dolor nesciunt voluptate ab, alias error dicta harum nemo iure natus, velit sequi! Beatae aut esse suscipit voluptatem placeat, consequatur eligendi veritatis tenetur laborum facere rerum odit a, quis ex repellat aperiam dolores ad possimus illo. Quasi, quia porro id quis quos corporis, quibusdam est similique fugiat, harum nesciunt minima? Quasi nisi minus, mollitia dolor cupiditate vero eaque ipsum sunt sapiente minima veritatis a, aliquid temporibus rem asperiores optio? Itaque eum fugiat odit earum laudantium repudiandae! Unde, illo voluptatem? Dignissimos quae alias quam culpa autem non at. Necessitatibus ipsum corrupti magnam explicabo possimus distinctio vitae blanditiis atque consequuntur ducimus optio amet sint fugiat saepe, cum quam libero veniam nulla dignissimos voluptatibus accusantium?</p>
-    </article>
+
+      {{--First Post--}}
+      <article class="post">
+          <h1 class="title"><a href="/posts/first_post">Post</a></h1>
+          <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam corrupti. Dolor
+              nesciunt voluptate ab, alias error dicta harum nemo iure natus, velit sequi! Beatae aut esse suscipit
+              voluptatem placeat, consequatur eligendi veritatis tenetur laborum facere rerum odit a, quis ex repellat
+              aperiam dolores ad possimus illo. Quasi, quia porro id quis quos corporis, quibusdam est similique fugiat,
+              harum nesciunt minima? Quasi nisi minus, mollitia dolor cupiditate vero eaque ipsum sunt sapiente minima
+              veritatis a, aliquid temporibus rem asperiores optio? Itaque eum fugiat odit earum laudantium repudiandae!
+              Unde, illo voluptatem? Dignissimos quae alias quam culpa autem non at. Necessitatibus ipsum corrupti
+              magnam explicabo possimus distinctio vitae blanditiis atque consequuntur ducimus optio amet sint fugiat
+              saepe, cum quam libero veniam nulla dignissimos voluptatibus accusantium?</p>
+      </article>
+
+      {{--Second Post--}}
+      <article class="post">
+          <h1 class="title"><a href="/posts/second_post">Post</a></h1>
+          <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam corrupti. Dolor
+              nesciunt voluptate ab, alias error dicta harum nemo iure natus, velit sequi! Beatae aut esse suscipit
+              voluptatem placeat, consequatur eligendi veritatis tenetur laborum facere rerum odit a, quis ex repellat
+              aperiam dolores ad possimus illo. Quasi, quia porro id quis quos corporis, quibusdam est similique fugiat,
+              harum nesciunt minima? Quasi nisi minus, mollitia dolor cupiditate vero eaque ipsum sunt sapiente minima
+              veritatis a, aliquid temporibus rem asperiores optio? Itaque eum fugiat odit earum laudantium repudiandae!
+              Unde, illo voluptatem? Dignissimos quae alias quam culpa autem non at. Necessitatibus ipsum corrupti
+              magnam explicabo possimus distinctio vitae blanditiis atque consequuntur ducimus optio amet sint fugiat
+              saepe, cum quam libero veniam nulla dignissimos voluptatibus accusantium?</p>
+      </article>
+
+      {{--Third Post--}}
+      <article class="post">
+          <h1 class="title"><a href="/posts/third_post">Post</a></h1>
+          <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam corrupti. Dolor
+              nesciunt voluptate ab, alias error dicta harum nemo iure natus, velit sequi! Beatae aut esse suscipit
+              voluptatem placeat, consequatur eligendi veritatis tenetur laborum facere rerum odit a, quis ex repellat
+              aperiam dolores ad possimus illo. Quasi, quia porro id quis quos corporis, quibusdam est similique fugiat,
+              harum nesciunt minima? Quasi nisi minus, mollitia dolor cupiditate vero eaque ipsum sunt sapiente minima
+              veritatis a, aliquid temporibus rem asperiores optio? Itaque eum fugiat odit earum laudantium repudiandae!
+              Unde, illo voluptatem? Dignissimos quae alias quam culpa autem non at. Necessitatibus ipsum corrupti
+              magnam explicabo possimus distinctio vitae blanditiis atque consequuntur ducimus optio amet sint fugiat
+              saepe, cum quam libero veniam nulla dignissimos voluptatibus accusantium?</p>
+      </article>
   </div>
 
 
