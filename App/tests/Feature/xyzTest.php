@@ -4,10 +4,10 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class xyzTest extends TestCase
 {
     /**
-     * A basic test example.
+     * A basic feature test example.
      *
      * @return void
      */
@@ -15,7 +15,6 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-        // 302 redirect status
         $response->assertStatus(302);
     }
 }

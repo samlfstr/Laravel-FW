@@ -17,8 +17,8 @@ use App\Models\Post;
 |
 */
 
-Route::get('/', function () {
-    return redirect('main ');
+Route::get("/", function () {
+    return redirect('main');
 });
 
 Route::get('/bg', function () {
