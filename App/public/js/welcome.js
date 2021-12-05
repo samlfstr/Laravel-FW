@@ -26,6 +26,9 @@ btn.forEach((item) => {
         else if (item.innerHTML == 'TEST') {
             location.href = '/test';
         }
+        else if (item.innerHTML == 'ASYNC') {
+            location.href = '/async';
+        }
     });
 });
 
