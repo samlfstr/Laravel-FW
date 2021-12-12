@@ -11,7 +11,8 @@
 <body>
 
 
-<script src="{{ URL::asset('js/Async/async.js') }}"></script>
+<script src="{{ URL::asset('js/Async/xhr.js') }}"></script>
+
 </body>
 
 </html>
