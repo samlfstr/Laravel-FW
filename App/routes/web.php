@@ -83,6 +83,10 @@ Route::get('/async', function () {
     return view('async');
 });
 
+Route::get('/math', function () {
+    return view('math');
+});
+
 // {post} this notation is called wild card
 // and the $slug variable is what ever the {post} is
 // this path information comes from an <a> tag
