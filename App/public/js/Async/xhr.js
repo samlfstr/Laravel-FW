@@ -26,7 +26,7 @@ request.addEventListener("readystatechange", () => {
             console.log('Request is being processed');
             break;
         case 4:
-            if (!received){
+            if (!received || request.status === 404){
                 console.log('Check the URL and make sure you send the request.');
                 break;
             }
@@ -35,6 +35,10 @@ request.addEventListener("readystatechange", () => {
             break;
     }
 });
+
+request.open("GET", 'https://jsonplaceholder.typicode.com/todos');
+request.send();
+
 
 
 /* window events
@@ -48,8 +52,6 @@ window.onload = ()=>{
 */
 
 
-request.open("GET", 'https://jsonplaceholder.typicode.com/todos/5');
-request.send();
 
 
 
