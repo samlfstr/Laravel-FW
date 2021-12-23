@@ -15,7 +15,7 @@
         <!-- Start Body -->
         <p> First Name : {{ $name }}</p>
         <!-- End Body-->
-        <script src="{{ URL::asset('js/test.js') }}"></script>
+        <script src="{{ URL::asset('js/math/compound_interest.js') }}"></script>
     </body>
 
 </html>
