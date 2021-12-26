@@ -20,6 +20,11 @@ function Example() {
 export default Example;
 
 if (document.getElementById('example')) {
-    ReactDOM.render(<Example />, document.getElementById('example'));
+
+    ReactDOM.render(
+        // <Example/>,
+        React.createElement('h1', {style:{color: 'red'}}, 'title'),
+        document.getElementById('example'),
+    );
 }
 
