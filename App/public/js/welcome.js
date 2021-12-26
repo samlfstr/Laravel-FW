@@ -22,6 +22,8 @@ btn.forEach((item) => {
             location.href = '/async';
         } else if (item.innerHTML == 'MATH') {
             location.href = '/math';
+        } else if (item.innerHTML == 'REACT') {
+            location.href = '/react';
         }
 
     });
