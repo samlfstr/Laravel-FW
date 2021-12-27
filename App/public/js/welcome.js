@@ -24,6 +24,8 @@ btn.forEach((item) => {
             location.href = '/math';
         } else if (item.innerHTML == 'REACT') {
             location.href = '/react';
+        }else if (item.innerHTML == 'TODO LIST') {
+            location.href = '/todolist';
         }
 
     });
