@@ -6361,12 +6361,8 @@ button.bg-dark:focus {
   display: table-cell !important;
 }
 
-.d-flex {
-  display: flex !important;
-}
-
 .d-inline-flex {
-  display: inline-flex !important;
+  display: inline-flex;
 }
 
 @media (min-width: 576px) {
@@ -6433,10 +6429,6 @@ button.bg-dark:focus {
 
   .d-md-table-cell {
     display: table-cell !important;
-  }
-
-  .d-md-flex {
-    display: flex !important;
   }
 
   .d-md-inline-flex {

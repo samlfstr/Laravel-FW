@@ -23,37 +23,37 @@ add.addEventListener('submit', (e) => {
     }
 });
 
-todos.addEventListener('click', (e)=>{
+todos.addEventListener('click', (e) => {
     let x = e.target;
     // if the target class list contains ... class
-    if(e.target.classList.contains('delete')){
+    if (e.target.classList.contains('delete')) {
         x.parentNode.remove();
         // x.parentElement.remove();
     }
 });
 
-const filterInput = function (input){
+const filterInput = function (input) {
+    Array.from(todos.children)
+        // _todo here is the one of the child of todos which means ul tag
+        // textContent returns the text where ever the tag is
+        // filter and return all _todo that doesn't have a text match
+        .filter((_todo) => !_todo.textContent.includes(input))
+        // then apply to those terms a class which later hide inside css
+        .forEach((_todo) => {
+            _todo.style = 'display: none !important;';
+        });
 
-    let _todos = todos.childNodes;
-    let _elements = Array();
-    let _nodes;
-
-    _todos.forEach((item)=>{
-        if(item.nodeName === 'LI'){
-            _nodes = item.childNodes;
-            _elements.push(_nodes.item(1).innerText);
-        }
-    });
-
-
+    // if there is no match I want to remove the filtered class
+    Array.from(todos.children)
+        .filter((_todo) => _todo.textContent.includes(input))
+        .forEach((_todo) => {
+            _todo.style = 'display: inherit;';
+        });
 };
 
-search.addEventListener('keyup',(e)=>{
+search.addEventListener('keyup', (e) => {
     const _in = search.value.trim();
     filterInput(_in);
-    if(e.target.classList.contains('delete')){
-
-    }
 });
 
 

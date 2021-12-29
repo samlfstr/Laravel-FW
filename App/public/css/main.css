@@ -11,9 +11,16 @@ input[type=text]:focus{
     background: rgba(0,0,0,0.2) !important;
     max-width: 400px !important;
 }
-.todos li{
-    background: #423a6f !important;
+.todos li {
+    background: #423a6f;
 }
+
+.filtered{
+    display: none !important;
+}
+
 .delete{
-    cursor: pointer !important;
+    cursor: pointer;
 }
+
+
