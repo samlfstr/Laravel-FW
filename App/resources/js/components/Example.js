@@ -22,12 +22,8 @@ export default Example;
 if (document.getElementById('example')) {
 
     ReactDOM.render(
-        // What to create, Where to create
-        React.createElement(
-            'h1',
-            {style:{color: 'green'}},
-            <i> Vital </i>
-        ),
+        // JSX syntax works with babel
+        <h1 className={'we-can-add-class-name'}> <i> Vital </i> </h1>,
         document.getElementById('example'),
     );
 }

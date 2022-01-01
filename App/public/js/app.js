@@ -1947,14 +1947,13 @@ function Example() {
 if (document.getElementById('example')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render(
   /*#__PURE__*/
-  // What to create, Where to create
-  react__WEBPACK_IMPORTED_MODULE_0__.createElement('h1', {
-    style: {
-      color: 'green'
-    }
-  }, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-    children: " Vital "
-  })), document.getElementById('example'));
+  // JSX syntax works with babel
+  (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h1", {
+    className: 'we-can-add-class-name',
+    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+      children: " Vital "
+    }), " "]
+  }), document.getElementById('example'));
 }
 
 /***/ }),
