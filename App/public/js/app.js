@@ -1947,12 +1947,14 @@ function Example() {
 if (document.getElementById('example')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render(
   /*#__PURE__*/
-  // <Example/>,
+  // What to create, Where to create
   react__WEBPACK_IMPORTED_MODULE_0__.createElement('h1', {
     style: {
-      color: 'red'
+      color: 'green'
     }
-  }, 'title'), document.getElementById('example'));
+  }, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+    children: " Vital "
+  })), document.getElementById('example'));
 }
 
 /***/ }),

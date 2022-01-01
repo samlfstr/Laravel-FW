@@ -22,8 +22,12 @@ export default Example;
 if (document.getElementById('example')) {
 
     ReactDOM.render(
-        // <Example/>,
-        React.createElement('h1', {style:{color: 'red'}}, 'title'),
+        // What to create, Where to create
+        React.createElement(
+            'h1',
+            {style:{color: 'green'}},
+            <i> Vital </i>
+        ),
         document.getElementById('example'),
     );
 }
