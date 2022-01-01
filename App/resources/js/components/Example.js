@@ -1,29 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function Example() {
-    return (
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">This is a component</div>
-
-                        <div className="card-body">I'm an example component!</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+// This is a component
+function Hello (){
+    return <p> Hello Fellas </p>;
 }
-
-export default Example;
 
 if (document.getElementById('example')) {
 
     ReactDOM.render(
-        // JSX syntax works with babel
-        <h1 className={'we-can-add-class-name'}> <i> Vital </i> </h1>,
+        // And this is how do we call a component
+        <h1 className={'we-can-add-class-name'}> <i> Vital <Hello/> </i> </h1>,
         document.getElementById('example'),
     );
 }
