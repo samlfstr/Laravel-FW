@@ -1,0 +1,13 @@
+
+.questions{
+    display: block;
+}
+.question{
+    margin-bottom: 1em;
+}
+.question h2{
+    margin-bottom: -0.1em;
+}
+form hr{
+   width: 35em !important;
+}

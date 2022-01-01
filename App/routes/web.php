@@ -95,6 +95,10 @@ Route::get('/todolist', function () {
     return view('todolist');
 });
 
+Route::get('/quiz', function () {
+    return view('quiz');
+});
+
 // {post} this notation is called wild card
 // and the $slug variable is what ever the {post} is
 // this path information comes from an <a> tag

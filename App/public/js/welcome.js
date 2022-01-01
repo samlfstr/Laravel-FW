@@ -24,8 +24,10 @@ btn.forEach((item) => {
             location.href = '/math';
         } else if (item.innerHTML == 'REACT') {
             location.href = '/react';
-        }else if (item.innerHTML == 'TODO LIST') {
+        } else if (item.innerHTML == 'TODO LIST') {
             location.href = '/todolist';
+        } else if (item.innerHTML == 'QUIZ') {
+            location.href = '/quiz';
         }
 
     });
