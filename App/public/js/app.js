@@ -1924,15 +1924,33 @@ function Hello() {
   });
 }
 
+function Person(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+    children: [" ", props.name, " "]
+  });
+}
+
+function Welcome() {
+  // retun person with name parameter
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "names",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Person, {
+      name: "Sam"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Person, {
+      name: "Aaron"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Person, {
+      name: "Joshua"
+    })]
+  });
+}
+
 if (document.getElementById('example')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render(
   /*#__PURE__*/
   // And this is how do we call a component
-  (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h1", {
+  (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
     className: 'we-can-add-class-name',
-    children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("i", {
-      children: [" Vital ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Hello, {}), " "]
-    }), " "]
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Welcome, {})
   }), document.getElementById('example'));
 }
 
