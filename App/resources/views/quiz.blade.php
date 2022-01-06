@@ -22,7 +22,7 @@
         <form>
             <div class="question">
                 <h2> First Question ? </h2>
-                <input id="q1op1" type="radio" value="A" name="question1" checked="checked">
+                <input id="q1op1" type="radio" value="A" name="question1">
                 <label for="q1op1">A</label>
                 <br>
                 <input id="q1op2" type="radio" value="B" name="question1">
@@ -37,7 +37,7 @@
                 <input id="q2op1" type="radio" value="A" name="question2">
                 <label for="q2op1">A</label>
                 <br>
-                <input id="q2op2" type="radio" value="B" name="question2" checked="checked">
+                <input id="q2op2" type="radio" value="B" name="question2">
                 <label for="q2op2">B</label>
                 <br>
                 <input id="q2op3" type="radio" value="C" name="question2">
@@ -49,7 +49,7 @@
                 <input id="q3op1" type="radio" value="A" name="question3">
                 <label for="q3op1">A</label>
                 <br>
-                <input id="q3op2" type="radio" value="B" name="question3" checked="checked">
+                <input id="q3op2" type="radio" value="B" name="question3">
                 <label for="q3op2">B</label>
                 <br>
                 <input id="q3op3" type="radio" value="C" name="question3">
@@ -57,7 +57,7 @@
             </div>
             <hr>
 
-            <input type="submit" value="Send">
+            <input id="submit" type="submit" value="Send">
         </form>
     </div>
 </div>
