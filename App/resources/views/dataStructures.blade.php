@@ -11,8 +11,12 @@
 <body>
 
 
+{{--
 <script src="{{ URL::asset('js/Data Structures/dataStructures.js') }}"></script>
 <script src="{{ URL::asset('js/Data Structures/forLoopComplexity.js') }}"></script>
+--}}
+
+<script src="{{ URL::asset('js/Data Structures/String Manipulation/mth_filter.js') }}"></script>
 </body>
 
 </html>

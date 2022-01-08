@@ -28,6 +28,8 @@ btn.forEach((item) => {
             location.href = '/todolist';
         } else if (item.innerHTML == 'QUIZ') {
             location.href = '/quiz';
+        } else if (item.innerHTML == 'DATA') {
+            location.href = '/data';
         }
 
     });
