@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/test', function () {
+    return "The Message";
+});
+
+
+Route::post('/usr', [ApiController::class, 'store']);
+Route::get('/usr', [ApiController::class, 'index']);
+Route::get('/usr/{id}', [ApiController::class, 'show']);
+Route::put('/usr/{id}', [ApiController::class, 'update']);
+Route::delete('/usr/{id}', [ApiController::class, 'delete']);
+Route::get('/usr/search/{name}',[ApiController::class, 'search']);
+
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
