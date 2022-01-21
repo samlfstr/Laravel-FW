@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/test', function () {
-    return "The Message";
-});
-
-
+Route::post('/register', [AuthController::class, 'register']);
 Route::post('/usr', [ApiController::class, 'store']);
 Route::get('/usr', [ApiController::class, 'index']);
 Route::get('/usr/{id}', [ApiController::class, 'show']);
@@ -27,10 +24,10 @@ Route::put('/usr/{id}', [ApiController::class, 'update']);
 Route::delete('/usr/{id}', [ApiController::class, 'delete']);
 Route::get('/usr/search/{name}',[ApiController::class, 'search']);
 
-
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/me', function(Request $request) {
+        return auth()->user();
+    });
 });
 
 
