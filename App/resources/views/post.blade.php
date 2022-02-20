@@ -15,7 +15,10 @@
 
 <div class="post_container">
 
-    <?= $post; ?>
+    <h2><?= $post->title; ?></h2>
+    <h5><?= $post->excerpt ?></h5>
+    <p><?= $post->body ?></p>
+
     <p><a href="/posts">Go Back</a></p>
 
 </div>

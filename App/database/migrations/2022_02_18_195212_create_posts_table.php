@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Client extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class Client extends Migration
      */
     public function up()
     {
-        Schema::create('client', function (Blueprint $table){
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name', 50);
-            $table->string('last_name', 50);
+            $table->string('title');
+            $table->string('excerpt');
+            $table->string('body');
             $table->timestamps();
+            $table->timestamp('published_at')->nullable();
         });
     }
 
@@ -28,6 +30,6 @@ class Client extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client');
+        Schema::dropIfExists('posts');
     }
 }

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -11,7 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     /*That way I can select the table that is going to be used*/
-    protected $table= "users";
+    protected $table = "users";
 
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -46,8 +45,9 @@ class User extends Authenticatable
     ];
 
     // Mind using eager load when you deal with related tables
-    static function getUserById($key){
+    static function getUserById($key)
+    {
         $users = User::all();
-       return $users->find($key);
+        return $users->find($key);
     }
 }

@@ -99,17 +99,15 @@ Route::get('/quiz', function () {
     return view('quiz');
 });
 
-// {post} this notation is called wild card
-// and the $slug variable is what ever the {post} is
-// this path information comes from an <a> tag
+// wildcard variable should match with the functions slug
 Route::get('/posts/{post}', function ($slug) {
 
     // First try to describe what you are trying to do, then look at your code
     // if your code doesn't look like that then transform it into that
 
     // Here instead of having all these code here, we can create a class model to handle all for us
-
     $post = Post::find($slug);
+    /*$post = "<p> Samuel Foster </p>";*/
 
     return view('post') -> with(
         [
@@ -136,13 +134,13 @@ Route::get('/posts/{post}', function ($slug) {
 
     /* 0.1
     return view('post') -> with( // Hard coding using __DIR__ returns always the first post
-        ['post' => file_get_contents(__DIR__ . '/../resources/posts/first_post.html')]
+        ['post' => file_get_contents(__DIR__ . '/../resources/posts/first-post.html')]
     );
     */
 
     /* 0.2
     // use control + s to introduce a variable
-    $post = file_get_contents(__DIR__ . '/../resources/posts/first_post.html');
+    $post = file_get_contents(__DIR__ . '/../resources/posts/first-post.html');
     return view('post') -> with( // Hard coding using __DIR__ returns always the first post
         [
             'post' => $post
@@ -158,7 +156,7 @@ Route::get('/posts/{post}', function ($slug) {
 
 
     // the constrain of course takes the wild card variable
-})->whereAlphaNumeric('post');
+});
 
 Route::permanentRedirect('/here', '/to_there');
 
@@ -169,3 +167,31 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => 'age'], function () {
     Route::get('/userName', [UsersController::class, 'show']);
 });
+
+//<editor-fold desc="_Repetition">
+// description : routes and php syntax inside blade
+//</editor-fold>
+
+Route::get('/laravel-rep', function(){
+    $names = [
+        'Samuel',
+        'Aaron',
+        'Jhon'
+    ];
+    return view('layout')->with('names',$names);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

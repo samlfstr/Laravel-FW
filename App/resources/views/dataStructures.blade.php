@@ -18,7 +18,7 @@
 --}}
 
 {{--<script src="{{ URL::asset('js/Data Structures/String Manipulation/mth_filter.js') }}"></script>--}}
-<script src="{{ URL::asset('js/Data Structures/String Manipulation/mth_match.js') }}"></script>
+<script src="{{ URL::asset('js/Data Structures/palendrome.js') }}"></script>
 </body>
 
 </html>
