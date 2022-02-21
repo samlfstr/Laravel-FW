@@ -16,7 +16,7 @@
 
       {{--First Post--}}
       <article class="post">
-          <h1 class="title"><a href="/posts/1">Post</a></h1>
+          <h1 class="title"><a href="/posts/first-post">Post</a></h1>
           <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam corrupti. Dolor
               nesciunt voluptate ab, alias error dicta harum nemo iure natus, velit sequi! Beatae aut esse suscipit
               voluptatem placeat, consequatur eligendi veritatis tenetur laborum facere rerum odit a, quis ex repellat
@@ -30,7 +30,7 @@
 
       {{--Second Post--}}
       <article class="post">
-          <h1 class="title"><a href="/posts/2">Post</a></h1>
+          <h1 class="title"><a href="/posts/second-post">Post</a></h1>
           <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam corrupti. Dolor
               nesciunt voluptate ab, alias error dicta harum nemo iure natus, velit sequi! Beatae aut esse suscipit
               voluptatem placeat, consequatur eligendi veritatis tenetur laborum facere rerum odit a, quis ex repellat
@@ -44,7 +44,7 @@
 
       {{--Third Post--}}
       <article class="post">
-          <h1 class="title"><a href="/posts/3">Post</a></h1>
+          <h1 class="title"><a href="/posts/third-post">Post</a></h1>
           <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam corrupti. Dolor
               nesciunt voluptate ab, alias error dicta harum nemo iure natus, velit sequi! Beatae aut esse suscipit
               voluptatem placeat, consequatur eligendi veritatis tenetur laborum facere rerum odit a, quis ex repellat

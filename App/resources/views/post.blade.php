@@ -15,7 +15,7 @@
 
 <div class="post_container">
 
-    <h2><?= $post->title; ?></h2>
+    <h2><?= $post->title ?></h2>
     <h5><?= $post->excerpt ?></h5>
     <p><?= $post->body ?></p>
 

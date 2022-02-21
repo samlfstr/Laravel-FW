@@ -17,6 +17,8 @@ use App\Models\Post;
 |
 */
 
+//<editor-fold desc="_Main Page">
+
 Route::get("/", function () {
     return redirect('main');
 });
@@ -99,21 +101,33 @@ Route::get('/quiz', function () {
     return view('quiz');
 });
 
+
+Route::permanentRedirect('/here', '/to_there');
+
+
+Auth::routes();
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => 'age'], function () {
+    Route::get('/userName', [UsersController::class, 'show']);
+});
+
+
+
+//</editor-fold>
+
 // wildcard variable should match with the functions slug
 Route::get('/posts/{post}', function ($slug) {
 
-    // First try to describe what you are trying to do, then look at your code
-    // if your code doesn't look like that then transform it into that
-
-    // Here instead of having all these code here, we can create a class model to handle all for us
-    $post = Post::find($slug);
-    /*$post = "<p> Samuel Foster </p>";*/
+    $post = Post::query()->where('slug', '=', $slug)->first();
 
     return view('post') -> with(
         [
             'post' => $post
         ]
     );
+
+    //<editor-fold desc="_Old Versions">
 
 
     /*$path = __DIR__ . "/../resources/posts/$slug.html";
@@ -153,35 +167,10 @@ Route::get('/posts/{post}', function ($slug) {
     Route::get('/posts/{post}', function ($slug) {
     return $slug;
      */
-
+    //</editor-fold>
 
     // the constrain of course takes the wild card variable
 });
-
-Route::permanentRedirect('/here', '/to_there');
-
-
-Auth::routes();
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-Route::group(['middleware' => 'age'], function () {
-    Route::get('/userName', [UsersController::class, 'show']);
-});
-
-//<editor-fold desc="_Repetition">
-// description : routes and php syntax inside blade
-//</editor-fold>
-
-Route::get('/laravel-rep', function(){
-    $names = [
-        'Samuel',
-        'Aaron',
-        'Jhon'
-    ];
-    return view('layout')->with('names',$names);
-});
-
-
 
 
 
