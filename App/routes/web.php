@@ -2,9 +2,10 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
+use App\Models\Category;
+use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,7 +114,6 @@ Route::group(['middleware' => 'age'], function () {
 });
 
 
-
 //</editor-fold>
 
 // wildcard variable should match with the functions slug
@@ -121,11 +121,16 @@ Route::get('/posts/{post}', function ($slug) {
 
     $post = Post::query()->where('slug', '=', $slug)->first();
 
-    return view('post') -> with(
-        [
-            'post' => $post
-        ]
-    );
+    if (isset($post)) {
+        return view('post')->with(
+            [
+                'post' => $post
+            ]
+        );
+    } else {
+        abort(404);
+    }
+
 
     //<editor-fold desc="_Old Versions">
 
@@ -143,7 +148,6 @@ Route::get('/posts/{post}', function ($slug) {
         var_dump('file_get_contents');
         return file_get_contents($path);
     });*/
-
 
 
     /* 0.1
@@ -173,8 +177,23 @@ Route::get('/posts/{post}', function ($slug) {
 });
 
 
+// return all the related posts to a category
+Route::get('posts', function () {
 
+    $posts = Post::all();
 
+    return view('posts')->with([
+        'posts' => $posts
+    ]);
+});
+
+Route::get('posts/category/{category}', function ($category){
+    $c_posts = Category::query()->where('name', '=', $category)->get();
+
+    return view('categories')->with([
+        'c_posts' => $c_posts
+    ]);
+});
 
 
 

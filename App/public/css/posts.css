@@ -12,3 +12,11 @@
 .post > .title{
     text-align: left;
 }
+
+.title{
+    margin-bottom: 2.5em;
+}
+
+.text_body{
+    margin-left: 1em;
+}

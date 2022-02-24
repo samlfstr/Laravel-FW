@@ -14,17 +14,16 @@
 <body>
 
 <div class="post_container">
+    @foreach($c_posts as $c_post)
+        @foreach($c_post->post as $post)
+            <div class="post">
+                <a href="../../posts/{{$post->slug}}"><h2><?= $post->title ?></h2></a>
+                <h5><?= $post->excerpt ?></h5>
+                <p><?= $post->body ?></p>
+            </div>
+        @endforeach
 
-    <div class="title">
-        <h2><?= $post->title ?></h2>
-        <a href="category/{{$post->category->name}}">{{$post->category->name}}</a>
-    </div>
-    <div class="text_body">
-        <h5><?= $post->excerpt ?></h5>
-        <p><?= $post->body ?></p>
-        <p><a href="/posts">Go Back</a></p>
-    </div>
-
+    @endforeach
 </div>
 
 <script src="{{ URL::asset('js/welcome.js') }}"></script>
