@@ -16,4 +16,10 @@ class Post extends Model
         // hasOne, hasMany, blongsTo...
         return $this->belongsTo(Category::class);
     }
+
+    public function user(): BelongsTo // user_id
+    {
+        // hasOne, hasMany, blongsTo...
+        return $this->belongsTo(Category::class);
+    }
 }

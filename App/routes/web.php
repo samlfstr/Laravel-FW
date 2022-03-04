@@ -5,6 +5,7 @@ use App\Http\Controllers\UsersController;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -176,9 +177,13 @@ Route::get('/posts/{post}', function ($slug) {
     // the constrain of course takes the wild card variable
 });
 
-
 // return all the related posts to a category
 Route::get('posts', function () {
+
+    DB::listen(function($query){
+        logger($query->sql);
+    });
+
 
     $posts = Post::all();
 
@@ -187,11 +192,10 @@ Route::get('posts', function () {
     ]);
 });
 
-Route::get('posts/category/{category}', function ($category){
-    $c_posts = Category::query()->where('name', '=', $category)->get();
-
+Route::get('category/{category}', function ($category){
+    $category = Category::query()->where('name', '=', $category)->get();
     return view('categories')->with([
-        'c_posts' => $c_posts
+        'category' => $category
     ]);
 });
 

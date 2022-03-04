@@ -17,8 +17,9 @@
 
     <div class="title">
         <h2><?= $post->title ?></h2>
-        <a href="category/{{$post->category->name}}">{{$post->category->name}}</a>
+        <a href="../category/{{$post->category->name}}">{{$post->category->name}}</a>
     </div>
+
     <div class="text_body">
         <h5><?= $post->excerpt ?></h5>
         <p><?= $post->body ?></p>

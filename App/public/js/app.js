@@ -54316,8 +54316,7 @@ function stopProfilerTimerIfRunningAndRecordDelta(fiber, overrideBaseTime) {
     var elapsedTime = now$1() - profilerStartTime;
     fiber.actualDuration += elapsedTime;
 
-    if (overrideBaseTime) {
-      fiber.selfBaseDuration = elapsedTime;
+    if (overrideBaseTime) {fiber.selfBaseDuration = elapsedTime;
     }
 
     profilerStartTime = -1;
