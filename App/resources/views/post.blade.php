@@ -16,12 +16,12 @@
 <div class="post_container">
 
     <div class="title">
-        <h2><?= $post->title ?></h2>
+        <h2><?= $post->title . " " . $post->author->name ?></h2>
         <a href="../category/{{$post->category->name}}">{{$post->category->name}}</a>
     </div>
 
     <div class="text_body">
-        <h5><?= $post->excerpt ?></h5>
+        <h5><?= $post->excerpt . " " . $post->author->name?></h5>
         <p><?= $post->body ?></p>
         <p><a href="/posts">Go Back</a></p>
     </div>

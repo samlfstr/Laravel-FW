@@ -24,9 +24,10 @@ class PostFactory extends Factory
         return [
             'category_id' => $this->faker->numberBetween(1, 3),
             'user_id' => $this->faker->numberBetween(1, 5),
+            'author_id' => $this->faker->numberBetween(1, 5),
             'title' => $this->faker->title,
             'excerpt' => $this->faker->title,
-            'body' => $this->faker->text(200),
+            'body' => $this->faker->text(200)
         ];
     }
 }

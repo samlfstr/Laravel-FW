@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
+use App\Models\Author;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
@@ -131,56 +132,22 @@ Route::get('/posts/{post}', function ($slug) {
     } else {
         abort(404);
     }
-
-
-    //<editor-fold desc="_Old Versions">
-
-
-    /*$path = __DIR__ . "/../resources/posts/$slug.html";
-
-    if(!file_exists($path)){
-        // dd('The file doesn\'t exists');
-        abort(404);
-    }
-
-    // $post = file_get_contents($path);
-    // it takes two parameters, what's it's unique key and how long after it should be re-executed
-    $post = cache()->remember("posts/$slug.html", now()->addSeconds(5), function() use ($path) {
-        var_dump('file_get_contents');
-        return file_get_contents($path);
-    });*/
-
-
-    /* 0.1
-    return view('post') -> with( // Hard coding using __DIR__ returns always the first post
-        ['post' => file_get_contents(__DIR__ . '/../resources/posts/first-post.html')]
-    );
-    */
-
-    /* 0.2
-    // use control + s to introduce a variable
-    $post = file_get_contents(__DIR__ . '/../resources/posts/first-post.html');
-    return view('post') -> with( // Hard coding using __DIR__ returns always the first post
-        [
-            'post' => $post
-        ]
-    );*/
-
-    /* 0.3
-        We can use slugs to pass what everwe want from url,
-        for e.g. we could've accesed the file with the file who'll be provided from url
-    Route::get('/posts/{post}', function ($slug) {
-    return $slug;
-     */
-    //</editor-fold>
-
-    // the constrain of course takes the wild card variable
 });
 
-// return all the related posts to a category
+/*
+|--------------------------------------------------------------------------
+| Eager Load
+|--------------------------------------------------------------------------
+| Model::with(['<relation_names>',' '...])->get();
+| With that we are limiting the number of times we send request
+| to the database, it is a very important thing to bear in mind
+| But there is an eaiser way to solve the n + 1 problem, it's to use
+| the models default protected $with variable.
+|
+*/
 Route::get('posts', function () {
 
-    DB::listen(function($query){
+    DB::listen(function ($query) {
         logger($query->sql);
     });
 
@@ -192,14 +159,21 @@ Route::get('posts', function () {
     ]);
 });
 
-Route::get('category/{category}', function ($category){
+Route::get('category/{category}', function ($category) {
     $category = Category::query()->where('name', '=', $category)->get();
     return view('categories')->with([
         'category' => $category
     ]);
 });
 
+Route::get('author/{author}', function ($author) {
+    $authors = Author::getBySlugName($author);
 
+    return view('post')->with([
+        'author' => $authors
+    ]);
+
+});
 
 
 

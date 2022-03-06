@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Author;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
-use Faker\Provider\Address;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         Category::truncate();
 
         User::factory(5)->create();
+        Author::factory(5)->create();
 
         Category::create([
             'name' => 'Personal',

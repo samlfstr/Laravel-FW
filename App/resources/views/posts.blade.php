@@ -16,8 +16,9 @@
 <div class="post_container">
     @foreach($posts as $post)
         <div class="post">
-            <a href="posts/{{ $post->slug}}"><h2><?= $post->title ?></h2></a>
-            <h5><?= $post->excerpt ?></h5>
+            <a href="posts/{{ $post->slug}}">
+                <h2><?= $post->title . " " .$post->author->name ?></h2></a>
+            <h5><?= $post->excerpt . " " . $post->author->name ?></h5>
             <p><?= $post->body ?></p>
         </div>
     @endforeach
