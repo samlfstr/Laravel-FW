@@ -179,5 +179,3 @@ Route::get('author/{author}', function ($author) {
 
 
 
-
-
