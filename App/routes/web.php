@@ -145,17 +145,20 @@ Route::get('/posts/{post}', function ($slug) {
 | the models default protected $with variable.
 |
 */
-Route::get('posts', function () {
+Route::get('posts/', function () {
 
+    // query variable is a build-in variable
     DB::listen(function ($query) {
         logger($query->sql);
     });
 
 
     $posts = Post::all();
+    $categories = Category::all();
 
     return view('posts')->with([
-        'posts' => $posts
+        'posts' => $posts,
+        'categories' => $categories
     ]);
 });
 
@@ -173,6 +176,15 @@ Route::get('author/{author}', function ($author) {
         'author' => $authors
     ]);
 
+});
+
+Route::get('payement',function(){
+    $payement = 'Different Payement Methods';
+    $categories = Category::all();
+    return view('payement')->with([
+        'payement' => $payement,
+        'categories' => $categories
+    ]);
 });
 
 
